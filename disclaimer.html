@@ -1,68 +1,239 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="light" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Disclaimer - FYD Travels</title>
-    <style>
-        body { font-family: sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 40px auto; padding: 0 20px; }
-        h1 { color: #c0392b; }
-        .highlight { border-left: 5px solid #c0392b; padding-left: 15px; margin: 20px 0; }
-        .nav-bar { background: #091E4F; padding: 12px 20px; margin: -40px -20px 40px; max-width: none; display: flex; align-items: center; justify-content: space-between; }
-        .nav-bar a { color: #fff; text-decoration: none; font-weight: bold; font-size: 14px; }
-        .nav-bar a:hover { text-decoration: underline; }
-        .nav-links { display: flex; gap: 24px; }
-        .footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #ddd; font-size: 13px; color: #777; display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; }
-        .footer a { color: #777; text-decoration: none; }
-        .footer a:hover { color: #091E4F; text-decoration: underline; }
-    </style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Disclaimer - FYD Travels</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "on-secondary-fixed": "#001b3e",
+          "on-surface": "#181c22",
+          "error": "#ba1a1a",
+          "primary-container": "#0873df",
+          "inverse-on-surface": "#eff0fa",
+          "on-secondary-fixed-variant": "#2e4770",
+          "on-secondary-container": "#405882",
+          "surface": "#f9f9ff",
+          "surface-container-lowest": "#ffffff",
+          "secondary-fixed-dim": "#afc7f7",
+          "secondary-fixed": "#d6e3ff",
+          "surface-tint": "#005db8",
+          "on-tertiary": "#ffffff",
+          "on-primary-container": "#fefcff",
+          "on-tertiary-container": "#fffbff",
+          "surface-bright": "#f9f9ff",
+          "secondary": "#465f89",
+          "primary": "#091E4F",
+          "on-primary-fixed": "#001b3e",
+          "surface-variant": "#e0e2ec",
+          "inverse-surface": "#2d3038",
+          "on-secondary": "#ffffff",
+          "on-error": "#ffffff",
+          "secondary-container": "#b7cfff",
+          "on-primary-fixed-variant": "#00458d",
+          "on-error-container": "#93000a",
+          "outline-variant": "#c1c6d5",
+          "on-tertiary-fixed": "#321200",
+          "tertiary": "#964400",
+          "surface-container-high": "#e6e8f1",
+          "inverse-primary": "#aac7ff",
+          "surface-container-highest": "#e0e2ec",
+          "on-surface-variant": "#414753",
+          "primary-fixed-dim": "#aac7ff",
+          "primary-fixed": "#d6e3ff",
+          "on-background": "#181c22",
+          "outline": "#717785",
+          "tertiary-fixed": "#ffdbc9",
+          "surface-container": "#ecedf7",
+          "on-primary": "#ffffff",
+          "error-container": "#ffdad6",
+          "on-tertiary-fixed-variant": "#763400",
+          "tertiary-fixed-dim": "#ffb68c",
+          "tertiary-container": "#bd5700",
+          "surface-dim": "#d8dae3",
+          "surface-container-low": "#f2f3fd",
+          "background": "#f9f9ff"
+        },
+        "borderRadius": {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        "fontFamily": {
+          "headline": ["Inter"],
+          "body": ["Inter"],
+          "label": ["Inter"]
+        }
+      },
+    },
+  }
+</script>
+<style>
+  body { font-family: 'Inter', sans-serif; }
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    vertical-align: middle;
+  }
+</style>
 </head>
-<body>
-    <div class="nav-bar">
-        <a href="index.html">FYD Travels</a>
-        <div class="nav-links">
-            <a href="index.html#destinations">Destinations</a>
-            <a href="index.html#destinations">Visa Types</a>
-            <a href="index.html#contact">Support</a>
-        </div>
+<body class="bg-background text-on-background antialiased">
+
+  <!-- WhatsApp Floating Button -->
+  <a class="fixed bottom-8 right-8 z-[60] bg-[#25D366] text-white p-4 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform duration-300" href="https://wa.me/447417403822" target="_blank">
+    <span class="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-25"></span>
+    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"></path>
+    </svg>
+  </a>
+
+  <!-- Header / TopNavBar -->
+  <nav class="bg-primary dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 shadow-sm sticky top-0 z-50">
+    <div class="flex justify-between items-center max-w-7xl mx-auto w-full px-6 font-sans antialiased">
+      <div class="text-2xl font-black tracking-tight text-blue-600 dark:text-blue-400">
+        <a href="index.html"><img class="w-auto h-20" src="fyd_logo_crop.jpg" alt="FYD Travels"/></a>
+      </div>
+      <div class="hidden md:flex items-center space-x-8">
+        <a class="text-slate-300 dark:text-slate-400 hover:text-blue-400 transition-colors" href="index.html#destinations">Destinations</a>
+        <a class="text-slate-300 dark:text-slate-400 hover:text-blue-400 transition-colors" href="index.html#destinations">Visa Types</a>
+        <a class="text-slate-300 dark:text-slate-400 hover:text-blue-400 transition-colors" href="index.html#contact">Requirements</a>
+        <a class="text-slate-300 dark:text-slate-400 hover:text-blue-400 transition-colors" href="https://wa.me/447417403822" target="_blank">Tracking</a>
+        <a class="text-slate-300 dark:text-slate-400 hover:text-blue-400 transition-colors" href="index.html#contact">Support</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="https://wa.me/447417403822" target="_blank" class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-bold text-sm hover:bg-primary-container transition-all active:opacity-80 duration-150 ease-in-out">Apply Now</a>
+      </div>
     </div>
+  </nav>
 
-    <h1>Disclaimer</h1>
-    <p><strong>Effective Date:</strong> January 2025</p>
-
-    <div class="highlight">
-        <h2>General Disclaimer</h2>
-        <p>FYD Group LTD (trading as FYD Travels) is an independent visa assistance service provider. We are <strong>not affiliated with, endorsed by, or connected to</strong> any government, embassy, or immigration authority.</p>
+  <!-- Page Hero Banner -->
+  <div class="bg-primary text-white py-12 px-6">
+    <div class="max-w-4xl mx-auto">
+      <p class="text-sm font-semibold text-blue-300 uppercase tracking-widest mb-2">Legal</p>
+      <h1 class="text-4xl font-black tracking-tight mb-3">Disclaimer</h1>
+      <p class="text-slate-300 text-base">Effective Date: January 2025</p>
     </div>
+  </div>
 
-    <h2>Visa Decisions</h2>
-    <p>All visa decisions are made solely by the relevant authorities (e.g., UK Visas and Immigration, Irish Immigration Service). We have no influence over the outcome of any visa application.</p>
+  <!-- Main Content -->
+  <main class="py-16 px-6">
+    <div class="max-w-4xl mx-auto">
 
-    <h2>No Guarantee of Approval</h2>
-    <p>We do not guarantee visa approval, processing times, or appointment availability. Approval or refusal is entirely at the discretion of the immigration authorities.</p>
+      <!-- Intro card -->
+      <div class="bg-amber-50 border border-amber-200 rounded-xl p-6 mb-10">
+        <p class="text-slate-700 text-base leading-relaxed">
+          FYD Group LTD (trading as <strong>FYD Travels</strong>) is an independent visa assistance service provider. We are <strong>not affiliated with, endorsed by, or connected to</strong> any government, embassy, or immigration authority.
+        </p>
+      </div>
 
-    <h2>Service Scope</h2>
-    <p>Our services are limited to administrative assistance and document preparation support. We do not provide legal or immigration advice.</p>
+      <div class="space-y-10">
 
-    <h2>Accuracy of Information</h2>
-    <p>While we strive for accuracy, we do not guarantee the completeness of information or reflect real-time changes in immigration rules. Clients must verify requirements with official authorities.</p>
+        <section>
+          <h2 class="text-xl font-bold text-primary mb-3 flex items-center gap-2">
+            <span class="inline-flex items-center justify-center w-8 h-8 bg-primary text-white rounded-full text-sm font-black">1</span>
+            Visa Decisions
+          </h2>
+          <p class="text-slate-600 leading-relaxed">
+            All visa decisions are made solely by the relevant authorities (e.g., UK Visas and Immigration, Irish Immigration Service). We have no influence over the outcome of any visa application.
+          </p>
+        </section>
 
-    <h2>Limitation of Liability</h2>
-    <p>FYD Travels shall not be held responsible for visa refusals, delays, financial losses, or travel disruptions.</p>
+        <section>
+          <h2 class="text-xl font-bold text-primary mb-3 flex items-center gap-2">
+            <span class="inline-flex items-center justify-center w-8 h-8 bg-primary text-white rounded-full text-sm font-black">2</span>
+            No Guarantee of Approval
+          </h2>
+          <p class="text-slate-600 leading-relaxed">
+            We do not guarantee visa approval, processing times, or appointment availability. Approval or refusal is entirely at the discretion of the immigration authorities.
+          </p>
+        </section>
 
-    <p><strong>Contact Us:</strong><br>
-    Email: <a href="mailto:servicesfyd@gmail.com">servicesfyd@gmail.com</a><br>
-    Phone: <a href="tel:+447417403822">+44 7417 403822</a><br>
-    WhatsApp: <a href="https://wa.me/447417403822" target="_blank">Chat with us</a></p>
+        <section>
+          <h2 class="text-xl font-bold text-primary mb-3 flex items-center gap-2">
+            <span class="inline-flex items-center justify-center w-8 h-8 bg-primary text-white rounded-full text-sm font-black">3</span>
+            Service Scope
+          </h2>
+          <p class="text-slate-600 leading-relaxed">
+            Our services are limited to administrative assistance and document preparation support. We do not provide legal or immigration advice.
+          </p>
+        </section>
 
-    <div class="footer">
-        <div>
-            <a href="index.html">Home</a> &nbsp;|&nbsp;
-            <a href="privacy_policy.html">Privacy Policy</a> &nbsp;|&nbsp;
-            <a href="terms_and_conditions.html">Terms &amp; Conditions</a> &nbsp;|&nbsp;
-            <a href="mailto:servicesfyd@gmail.com">Contact Us</a>
-        </div>
-        <div>&copy; 2026 FYD Group LTD. All rights reserved.</div>
+        <section>
+          <h2 class="text-xl font-bold text-primary mb-3 flex items-center gap-2">
+            <span class="inline-flex items-center justify-center w-8 h-8 bg-primary text-white rounded-full text-sm font-black">4</span>
+            Accuracy of Information
+          </h2>
+          <p class="text-slate-600 leading-relaxed">
+            While we strive for accuracy, we do not guarantee the completeness of information or reflect real-time changes in immigration rules. Clients must verify requirements with official authorities.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-xl font-bold text-primary mb-3 flex items-center gap-2">
+            <span class="inline-flex items-center justify-center w-8 h-8 bg-primary text-white rounded-full text-sm font-black">5</span>
+            Limitation of Liability
+          </h2>
+          <div class="bg-red-50 border border-red-200 rounded-lg p-4 text-slate-600 leading-relaxed">
+            FYD Travels shall not be held responsible for visa refusals, delays, financial losses, or travel disruptions arising from the use of our services.
+          </div>
+        </section>
+
+        <!-- Contact card -->
+        <section class="bg-surface-container rounded-xl p-8 border border-outline-variant">
+          <h2 class="text-xl font-bold text-primary mb-4">Contact Us</h2>
+          <div class="space-y-3">
+            <a href="mailto:servicesfyd@gmail.com" class="flex items-center gap-3 text-slate-600 hover:text-blue-600 transition-colors">
+              <span class="material-symbols-outlined text-blue-500">mail</span>
+              servicesfyd@gmail.com
+            </a>
+            <a href="tel:+447417403822" class="flex items-center gap-3 text-slate-600 hover:text-blue-600 transition-colors">
+              <span class="material-symbols-outlined text-blue-500">phone</span>
+              +44 7417 403822
+            </a>
+            <a href="https://wa.me/447417403822" target="_blank" class="flex items-center gap-3 text-slate-600 hover:text-blue-600 transition-colors">
+              <span class="material-symbols-outlined text-blue-500">chat</span>
+              WhatsApp Us
+            </a>
+          </div>
+        </section>
+
+      </div>
     </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 py-12 font-sans">
+    <div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto w-full transition-all duration-300">
+      <div class="mb-8 md:mb-0">
+        <div class="text-lg font-bold text-slate-900 dark:text-white mb-2">FYD</div>
+        <p class="text-sm font-normal text-slate-500 dark:text-slate-400 max-w-xs">Global reach, personal touch. Simplifying international travel documentation for over 15 years.</p>
+      </div>
+      <div class="flex flex-wrap justify-center gap-8 mb-8 md:mb-0">
+        <a class="text-sm font-normal text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 underline-offset-4" href="privacy_policy.html">Privacy Policy</a>
+        <a class="text-sm font-normal text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 underline-offset-4" href="terms_and_conditions.html">Terms of Service</a>
+        <a class="text-sm font-normal text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 underline-offset-4" href="disclaimer.html">Disclaimer</a>
+        <a class="text-sm font-normal text-slate-500 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 underline-offset-4" href="mailto:servicesfyd@gmail.com">Contact Us</a>
+      </div>
+      <div class="text-sm font-normal text-slate-500 dark:text-slate-400">
+        &copy; 2026 FYD. All rights reserved.
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-8 mt-8 pt-8 border-t border-slate-200 dark:border-slate-800 flex justify-between items-center text-[10px] uppercase tracking-widest text-slate-400 font-black">
+      <div>FYD Group LTD &mdash; United Kingdom</div>
+      <div class="flex gap-4">
+        <span>Facebook</span>
+        <span>LinkedIn</span>
+        <span>Instagram</span>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
